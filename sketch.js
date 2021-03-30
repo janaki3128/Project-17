@@ -66,6 +66,12 @@ function draw() {
       fruitsG.destroyEach();
       swoosh.play();
     }
+      var rand = Math.round(random(1,2));
+  if(rand === 1){
+    fruits();
+  }else{
+    spawnMonster();
+  }
     if(monsterG.isTouching(knife)){
       gameState = END;
      
@@ -84,12 +90,7 @@ function draw() {
   }
   
   
-  var rand = Math.round(random(1,2));
-  if(rand === 1){
-    fruits();
-  }else{
-    spawnMonster();
-  }
+
   drawSprites();
   
   
